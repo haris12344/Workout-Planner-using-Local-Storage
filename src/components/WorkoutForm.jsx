@@ -23,11 +23,11 @@ function WorkoutForm() {
   }
   return (
     <>
-    <h1 className="mt-10 font-bold text-2xl sm:text-3xl md:text-4xl text-neutral-400 text-center drop-shadow-2xl px-4">
+    <h1 className="mt-10 font-bold text-2xl sm:text-3xl md:text-4xl text-black text-center drop-shadow-2xl px-4">
     Collect and submit workout details such as name, goal, and duration of workout.
     </h1>
 
-<div className="flex justify-center items-center mt-10 mb-10 bg-green-700 w-[90%] sm:w-[550px] mx-auto p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-blue-700/50 transition-all duration-300">
+<div className="flex justify-center items-center mt-10 mb-10 bg-blue-900 w-[90%] sm:w-[550px] mx-auto p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-blue-700/50 transition-all duration-300">
   <div className="w-full">
     <div className="flex justify-center mt-2">
       <input

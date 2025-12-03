@@ -15,7 +15,7 @@ function ProgressTracker() {
 
   return (
     <div>
-  <div className="w-[90%] sm:w-[530px] mx-auto flex justify-center p-4 sm:p-6 text-center border border-neutral-500 mt-15 sm:mt-30 rounded-xl bg-neutral-300 text-black shadow-lg hover:shadow-red-600/20 transition-all duration-300">
+  <div className="w-[90%] sm:w-[530px] mx-auto flex justify-center p-4 sm:p-6 text-center border border-neutral-200 mt-10 sm:mt-30 rounded-xl bg-neutral-300 text-black shadow-lg transition-all duration-300">
     <div>
       <h1 className="font-bold text-2xl sm:text-3xl text-green-700">
         Progress Tracker 🏋️
@@ -62,13 +62,13 @@ function ProgressTracker() {
       </div>
 
       <h1 className="font-bold text-lg sm:text-2xl mt-3">
-        <span className="text-blue-600">Progress</span> : You have completed{" "}
+        <span className="text-green-600">Progress</span> : You have completed{" "}
         <span className="text-yellow-400">{total2}</span> tasks out of{" "}
         <span className="text-red-600">{total}</span> tasks.
       </h1>
 
       <h1 className="font-bold text-lg sm:text-2xl mt-2">
-        <span className="text-blue-600">Progress</span> (in %) :{" "}
+        <span className="text-green-600">Progress</span> (in %) :{" "}
         <span className="text-orange-400">{percentage}</span>%.
       </h1>
 

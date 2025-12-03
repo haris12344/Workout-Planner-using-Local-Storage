@@ -5,7 +5,7 @@ function WorkoutList() {
   const list = useSelector((state)=>state.workout.list);
   return (
     <div className="mt-5 mb-10 px-3 sm:px-6">
-  <h1 className="font-bold text-2xl sm:text-3xl mt-5 text-center animate-pulse text-blue-600 drop-shadow-lg">
+  <h1 className="font-bold text-2xl sm:text-3xl mt-5 text-center animate-pulse text-blue-900 drop-shadow-lg">
     🏋️ Here is the List of all workout.
   </h1>
 
@@ -29,30 +29,22 @@ function WorkoutList() {
             ⏱ Workout Duration : {workout.duration}
           </div>
 
-          <button
-            onClick={() => {
-              dispatch(toggleCompleted(workout.id));
-            }}
-            disabled={workout.completed}
-            className={`w-full font-bold py-2 rounded-lg mt-2 transition-all duration-300 ${
+          <button onClick={() => {
+            dispatch(toggleCompleted(workout.id));
+            }} disabled={workout.completed} className={`w-full font-bold py-2 rounded-lg mt-2 transition-all duration-300 ${
               workout.completed
                 ? "bg-green-600 hover:cursor-not-allowed"
-                : "bg-yellow-600 hover:bg-amber-500"
+                : "bg-yellow-600 hover:bg-amber-500 cursor-pointer"
             }`}
           >
-            {workout.completed ? "✅ Completed" : "Mark as Complete"}
+            {
+            workout.completed ? "✅ Completed" : "Mark as Complete"
+            }
           </button>
 
           <div className="flex mt-3 gap-3 items-center justify-between">
-            <h1 className="font-semibold text-neutral-400 text-base sm:text-lg">
-              Delete from list
-            </h1>
-            <button
-              className="hover:text-red-600 transition-colors duration-300"
-              onClick={() => {
-                dispatch(removeFromWorkout(workout.id));
-              }}
-            >
+            <h1 className="font-semibold text-neutral-400 text-base sm:text-lg">Delete from list</h1>
+            <button className="hover:text-red-600 transition-colors duration-300" onClick={() => {dispatch(removeFromWorkout(workout.id));}}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
